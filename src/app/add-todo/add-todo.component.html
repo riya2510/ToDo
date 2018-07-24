@@ -1,0 +1,13 @@
+<div class="container">
+    <form #addtodoForm="ngForm" novalidate class='form-horizontal' [ngClass]="{'ng-submitted':addtodoForm.submitted}">
+        <div class="form-group" > 
+            <label class="control">Name</label>
+            <input type="text"  class="form-control" name="name" [(ngModel)]="todos.task" required>
+            <br/>
+        </div> 
+
+        <button type="submit" class="btn btn-success" (click)="saveTodo()">Add</button>
+        &nbsp;&nbsp;&nbsp; 
+        <button type="reset" class="btn btn-success" (click)="cancel()">Cancel</button>
+    </form>
+</div>

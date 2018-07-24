@@ -1,0 +1,21 @@
+<div class="container">
+    <form #updatetodoForm="ngForm" novalidate class='form-horizontal' [ngClass]="{'ng-submitted':updatetodoForm.submitted}">
+
+      <div class="form-group">
+          complete  <button [style.background]="todo.isCompleted === true ? 'green':'red'" >{{todo.isCompleted}}</button>
+      </div>
+
+      <div class="form-group" > 
+        <label class="control">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="todo.task">
+        <br/>
+      </div>
+
+      <div class="form-group">
+        Completed  <input type="checkbox" name="completed" (change)="onChange($event)" [(ngModel)]="todo.isCompleted">
+      </div>
+  
+      <button type="submit" class="btn btn-success" (click)="updateTodo(todo.id)">Update</button>
+
+    </form>
+  </div>

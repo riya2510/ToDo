@@ -1,0 +1,15 @@
+<br/>
+<table class="table" style="width: 40%">
+    <tr *ngFor="let todo of todos">
+        <td>
+            <ul class="todos">
+                <li (click)="onSelect(todo)">
+                    <span class="badge">{{todo.id}}</span> {{todo.task}}  
+                </li> 
+            </ul>
+        </td>
+        <td>
+            <button (click)="deleteTodo(todo.id)" class="btn btn-danger">X</button>
+        </td>
+    </tr>
+</table>
