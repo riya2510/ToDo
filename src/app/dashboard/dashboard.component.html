@@ -1,9 +1,11 @@
+<h3>My ToDo List</h3>
+<a routerLink="/add-todo">Add New ToDo</a>
 <br/>
 <table class="table" style="width: 40%">
     <tr *ngFor="let todo of todos">
         <td>
             <ul class="todos">
-                <li (click)="onSelect(todo)">
+                <li (click)="onSelect(todo)" appHighlight>
                     <span class="badge">{{todo.id}}</span> {{todo.task}}  
                 </li> 
             </ul>
