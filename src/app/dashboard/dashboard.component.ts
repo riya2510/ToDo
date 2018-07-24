@@ -19,10 +19,8 @@ export class DashboardComponent implements OnInit {
 
   deleteTodo(id){
     this.todoService.deleteTodo(id).subscribe(res => {
-      console.log(' done');
       this.ngOnInit();
     },err => {
-      console.log(' error = ',err);
       this.ngOnInit();
     });
   }
